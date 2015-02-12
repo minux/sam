@@ -14,4 +14,5 @@ clean:
 	rm -f *.o rsam
 
 install: rsam
+	mkdir -p "$(BINDIR)"
 	cp rsam $(BINDIR)

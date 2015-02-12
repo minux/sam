@@ -8,6 +8,7 @@ sam.1.pdf: sam.1
 	tbl $< | groff -mdoc -Tpdf > $@
 
 install: sam.1 B
+	mkdir -p "$(MANDIR)" "$(BINDIR)"
 	cp sam.1 "$(MANDIR)"
 	cp B "$(BINDIR)"
 	ln -sf "$(MANDIR)/sam.1" "$(MANDIR)/B.1"

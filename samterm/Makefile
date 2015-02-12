@@ -47,6 +47,7 @@ nuke:	clean
 	rm -f samterm
 
 install:	samterm
+	mkdir -p $(dir $(SAMTERM))
 	cp samterm $(SAMTERM)
 
 $(OBJ):	samterm.h flayer.h ../include/frame.h ../include/libg.h ../include/u.h ../include/libc.h ../sam/mesg.h
