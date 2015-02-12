@@ -44,7 +44,7 @@ test:	$(LIB) test.o
 	$(CC) -o $@ $? $(LIB) $(XLIBS) -lm
 	echo try running test
 clean:
-	rm -f *.o test
+	rm -f *.o *.a test
 
 nuke:	clean
 	rm -f $(LIB)

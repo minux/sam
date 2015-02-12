@@ -41,7 +41,7 @@ samterm:	$(OBJ) $(LIBS)
 	$(CC)  -o samterm $(OBJ) $(LIBS) $(XLIBS)
 
 clean:
-	rm -f *.o core
+	rm -f *.o samterm core
 
 nuke:	clean
 	rm -f samterm

@@ -37,7 +37,7 @@ $(LIB):	$(OBJ)
 	$(RANLIB) $(LIB)
 
 clean:
-	rm -f *.o
+	rm -f *.o *.a
 
 nuke:	clean
 	rm -f $(LIB)
