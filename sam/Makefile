@@ -57,7 +57,7 @@ SYSFLAGS=  -DHOMEDIR=\"$(HOMEDIR)\" -DRSAMNAME=\"$(RSAMNAME)\" \
 		-DRXNAME=\"$(RXNAME)\" -DRXPATHNAME=\"$(RXPATHNAME)\" \
 		-DRXSAMNAME=\"$(RXSAMNAME)\" -DSAMSAVE=\"$(SAMSAVE)\"
 
-LIB=../libframe/libframe.a ../libXg/libXg.a
+LIB=../lib9/lib9.a
 CC=cc $(SYSFLAGS)
 
 OBJ=sam.o address.o buffer.o cmd.o disc.o error.o file.o io.o \

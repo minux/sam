@@ -35,7 +35,7 @@ OBJS=	arc.o arith.o balloc.o bitblt.o bitbltclip.o border.o bscreenrect.o\
 	circle.o clipline.o clipr.o copymasked.o cursorset.o cursorswitch.o\
 	disc.o ellipse.o font.o gcs.o getrect.o gwin.o ldconvert.o latin1.o\
 	menuhit.o point.o polysegment.o rdbitmap.o rdbitmapfile.o\
-	rectclip.o rune.o segment.o string.o strwidth.o texture.o\
+	rectclip.o segment.o string.o strwidth.o texture.o\
 	wrbitmap.o wrbitmapfile.o xtbinit.o
 
 all install:	$(LIB)

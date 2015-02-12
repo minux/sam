@@ -5,16 +5,16 @@
 #	define operating system.  ONE of:
 #		-DIRIX -DSUNOS -DUMIPS -DSYSVR3 -DAIX -DOSF1
 #		-DHPUX -DAPOLLO -DCONVEX -DDYNIX
-#	
+#
 #	Additionally, -D_POSIX_SOURCE (or its equivalent) may be specified
 #	if your compiler supports posix-compatible compilation
 include ../config.mk
 
-OS=-DIRIX5 
+OS=-DIRIX5
 
 #	add -Iincludedir for any include directories that need to be searched
 #	for posix header files (for UMIPS, add -I/usr/include/posix)
-INCS=-I../include -I$(FREETYPEINC)
+INCS=-I../include
 
 #	add name of library orderer - use ":" if none exists
 RANLIB=:
@@ -24,11 +24,10 @@ AR=ar
 
 CFLAGS=-c $(OS) $(INCS) -D_LIBXG_EXTENSION
 
-LIB=libframe.a
+LIB=lib9.a
 CC=cc
 
-OBJ=frbox.o frdelete.o frdraw.o frinit.o frinsert.o frptofchar.o\
-	frselect.o frstr.o frutil.o
+OBJ=misc.o rune.o
 
 all:	$(LIB)
 
@@ -44,4 +43,4 @@ nuke:	clean
 
 install:	$(LIB)
 
-$(OBJ):	../include/u.h ../include/libc.h ../include/frame.h
+$(OBJ):	../include/u.h ../include/libc.h

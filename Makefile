@@ -4,7 +4,10 @@
 #	master makefile for sam.  configure sub-makefiles first.
 #
 
-all:	lXg lframe rsamdir samdir samtermdir docdir
+all:	lutil lXg lframe rsamdir samdir samtermdir docdir
+
+lutil:
+	cd lib9; $(MAKE)
 
 lXg:
 	cd libXg; $(MAKE)
@@ -24,6 +27,7 @@ samtermdir:
 	cd samterm; $(MAKE)
 
 install:
+	cd lib9; $(MAKE) install
 	cd libXg; $(MAKE) install
 	cd libframe; $(MAKE) install
 	cd sam; $(MAKE) install
@@ -32,6 +36,7 @@ install:
 	cd rsam; $(MAKE) install
 
 clean:
+	cd lib9; $(MAKE) clean
 	cd libXg; $(MAKE) clean
 	cd libframe; $(MAKE) clean
 	cd sam; $(MAKE) clean
@@ -39,6 +44,7 @@ clean:
 	cd rsam; $(MAKE) clean
 
 nuke:
+	cd lib9; $(MAKE) nuke
 	cd libXg; $(MAKE) nuke
 	cd libframe; $(MAKE) nuke
 	cd sam; $(MAKE) nuke

@@ -30,7 +30,7 @@ XLIBS=-lXt -lX11 -lXft
 
 CFLAGS=$(OS) $(INCS) -D_LIBXG_EXTENSION
 
-LIBS=../libframe/libframe.a ../libXg/libXg.a
+LIBS=../lib9/lib9.a ../libframe/libframe.a ../libXg/libXg.a
 CC=cc -g
 
 OBJ=main.o flayer.o icons.o io.o menu.o mesg.o rasp.o scroll.o unix.o
